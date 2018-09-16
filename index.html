@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>theodinproject_JS | Rock Paper Scissors</title>
+</head>
+<body>
+	<h1>JS Rock Paper Scissors</h1>
+	<p>Open dev tools -> console, to view</p>
+	<script type="text/javascript">
+		//func compPlay() {..}
+		//return rock, paper or scissor
+		//single round game, func with 2 params (player, comp)
+		//returns winner or loser
+		//case insensitive
 
+		function computerPlay() {
+			let option	= Math.floor(Math.random() * 3);
+			return (option == 0) ? 'rock' : (option == 1) ? 'paper' :'scissors' ;
+		}
+
+
+	</script>
+</body>
+</html>
