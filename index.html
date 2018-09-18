@@ -4,21 +4,31 @@
 	<title>theodinproject_JS | Rock Paper Scissors</title>
 </head>
 <body>
-	<h1>JS Rock Paper Scissors</h1>
-	<p>Open dev tools -> console, to view</p>
+	<h1>Test</h1>
+	<p>Open dev tools => console, to view</p>
 	<script type="text/javascript">
-		//func compPlay() {..}
+		//func compPlay() {..} DONE
 		//return rock, paper or scissor
 		//single round game, func with 2 params (player, comp)
-		//returns winner or loser
-		//case insensitive
-
+		//returns winner or loser <- WORK ON
+		//case insensitive <- DONE (with toLowerCase)
+		function validInput(input) { //check if prompt is empty/null
+			return (input == "" || input ==null) ? alert('Enter valid choice') : '';
+		}
 		function computerPlay() {
 			let option	= Math.floor(Math.random() * 3);
 			return (option == 0) ? 'rock' : (option == 1) ? 'paper' :'scissors' ;
 		}
-
-
+		function playRound(playerSelection, compSelection) {
+			//if player's choice is same as computer
+			if (playerSelection === computerSelection) {
+				return 'Player: ' + playerSelection + ' VS ' + computerSelection + '\nResult: DRAW'; //return this
+			} 
+			return playerSelection + ' ' + computerSelection; //returns other results
+		}
+		const playerSelection = validInput(prompt('Enter ROCK, PAPER or SCISSORS')).toLowerCase(); //accepts rOcK, Rock, rOck etc.
+		const computerSelection = computerPlay();
+		console.log(playRound(playerSelection, computerSelection))
 	</script>
 </body>
 </html>
