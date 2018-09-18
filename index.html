@@ -15,17 +15,31 @@
 		function validInput(input) { //check if prompt is empty/null
 			return (input == "" || input ==null) ? alert('Enter valid choice') : '';
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> c095efc649db6bd1a16372d100cef71847e4c60e
 		function computerPlay() {
 			let option	= Math.floor(Math.random() * 3);
 			return (option == 0) ? 'rock' : (option == 1) ? 'paper' :'scissors' ;
 		}
+<<<<<<< HEAD
 		function playRound(playerSelection, compSelection) {
+=======
+
+		function playRound(playerSelection, compSelection) {
+
+>>>>>>> c095efc649db6bd1a16372d100cef71847e4c60e
 			//if player's choice is same as computer
 			if (playerSelection === computerSelection) {
 				return 'Player: ' + playerSelection + ' VS ' + computerSelection + '\nResult: DRAW'; //return this
 			} 
 			return playerSelection + ' ' + computerSelection; //returns other results
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> c095efc649db6bd1a16372d100cef71847e4c60e
 		const playerSelection = validInput(prompt('Enter ROCK, PAPER or SCISSORS')).toLowerCase(); //accepts rOcK, Rock, rOck etc.
 		const computerSelection = computerPlay();
 		console.log(playRound(playerSelection, computerSelection))
