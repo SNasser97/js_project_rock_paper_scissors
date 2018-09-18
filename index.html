@@ -5,14 +5,16 @@
 </head>
 <body>
 	<h1>Test</h1>
-	<p>Open dev tools -> console, to view</p>
+	<p>Open dev tools => console, to view</p>
 	<script type="text/javascript">
 		//func compPlay() {..} DONE
 		//return rock, paper or scissor
 		//single round game, func with 2 params (player, comp)
 		//returns winner or loser <- WORK ON
 		//case insensitive <- DONE (with toLowerCase)
-		
+		function validInput(input) { //check if prompt is empty/null
+			return (input == "" || input ==null) ? alert('Enter valid choice') : '';
+		}
 
 		function computerPlay() {
 			let option	= Math.floor(Math.random() * 3);
@@ -28,7 +30,7 @@
 			return playerSelection + ' ' + computerSelection; //returns other results
 		}
 
-		const playerSelection = prompt('Enter choice', 'rOcK').toLowerCase(); //accepts rOcK, Rock, rOck etc.
+		const playerSelection = validInput(prompt('Enter ROCK, PAPER or SCISSORS')).toLowerCase(); //accepts rOcK, Rock, rOck etc.
 		const computerSelection = computerPlay();
 		console.log(playRound(playerSelection, computerSelection))
 	</script>
