@@ -7,35 +7,112 @@
 	<h1>Test</h1>
 	<p>Open dev tools => console, to view</p>
 	<script type="text/javascript">
-		//func compPlay() {..} DONE
-		//return rock, paper or scissor
 		//single round game, func with 2 params (player, comp)
 		//returns winner or loser <- WORK ON
 		//case insensitive <- DONE (with toLowerCase)
-		function validInput(input) { //check if prompt is empty/null
-			return (input == "" || input ==null) ? alert('Enter valid choice') : '';
+		function validInput(input) {
+			// if (input === "" || input === null) {
+			// 	return alert('enter valid choice');
+			// }
+			return (input === "" || input === null) ? alert('enter valid choice') : input;
+			// return input;
 		}
 
 		function computerPlay() {
-			let option	= Math.floor(Math.random() * 3);
-			return (option == 0) ? 'rock' : (option == 1) ? 'paper' :'scissors' ;
+			var option	= Math.floor(Math.random() * 3);
+			return (option == 0) ? 'rock' : (option == 1) ? 'paper' :'scissors';
 		}
 
 		function playRound(playerSelection, compSelection) {
-
-
-		function playRound(playerSelection, compSelection) {
-
-			//if player's choice is same as computer
+			let result = '';
+			
+			switch(computerSelection) {
+				case 'rock': 
+				(playerSelection =='paper') ? result = `${playerSelection} vs ${computerSelection} - You WIN` : 
+				(playerSelection == 'scissors') ? result = `${playerSelection} vs ${computerSelection} - You LOSE` : 
+				(playerSelection == computerSelection) ? result = 'tis a draw' : result = alert('invalid choice');
+				break;
+				// if (playerSelection == 'paper') {
+				// 	result = `${playerSelection} vs ${computerSelection} - You WIN`;
+				// } else if (playerSelection == 'scissors') {
+				// 	result = `${playerSelection} vs ${computerSelection} - You LOSE`;
+				// } else if (playerSelection == computerSelection) {
+				// 	result = 'tis a draw!';
+				// } else {
+				// 	result = alert('invalid choice entered, try again');;
+				// }
+				break;
+				case 'paper': 
+				(playerSelection =='scissors') ? result = `${playerSelection} vs ${computerSelection} - You WIN` : 
+				(playerSelection == 'rock') ? result = `${playerSelection} vs ${computerSelection} - You LOSE` : 
+				(playerSelection == computerSelection) ? result = 'tis a draw' : result = alert('invalid choice');
+				/*if (playerSelection == 'scissors') {
+					result = `${playerSelection} vs ${computerSelection} - You WIN`;
+				} else if (playerSelection == 'rock') {
+					result = `${playerSelection} vs ${computerSelection} - You LOSE`;
+				} else if (playerSelection == computerSelection) {
+					result = 'tis a draw!';
+				} else {
+					result = alert('invalid choice entered, try again');;
+				}*/
+				break;
+				case 'scissors': 
+				(playerSelection =='rock') ? result = `${playerSelection} vs ${computerSelection} - You WIN` : 
+				(playerSelection == 'paper') ? result = `${playerSelection} vs ${computerSelection} - You LOSE` : 
+				(playerSelection == computerSelection) ? result = 'tis a draw' : result = alert('invalid choice');
+				/*if (playerSelection == 'rock') {
+					result = `${playerSelection} vs ${computerSelection} - You WIN`;
+				} else if (playerSelection == 'paper') {
+					result = `${playerSelection} vs ${computerSelection} - You LOSE`;
+				} else if (playerSelection == computerSelection) {
+					result = 'tis a draw!';
+				} else {
+					result = alert('invalid choice entered, try again');;
+				}*/
+				break;
+			}
+			return result;
+			/*
+			
 			if (playerSelection === computerSelection) {
-				return 'Player: ' + playerSelection + ' VS ' + computerSelection + '\nResult: DRAW'; //return this
-			} 
-			return playerSelection + ' ' + computerSelection; //returns other results
-		}
+				// return 'Player: ' + playerSelection + ' VS ' + computerSelection + '\nResult: DRAW'; 
+				return `Player: ${playerSelection} VS ${computerSelection} \nResult: Both DRAW`;
+			}
+			if (playerSelection === 'rock') {
+				if (computerSelection === 'paper') {
+					return 'comp wins with paper';
+				}
+			}
+			if (playerSelection === 'paper') {
+				if (computerSelection === 'scissors') {
+					return 'comp wins with scissors'
+				}
+			}
+			if (playerSelection === 'scissors') {
+				if (computerSelection === 'rock') {
+					return 'comp wins with rock';
+				}
+			}
+			if (playerSelection !== 'rock' && playerSelection !== 'paper' && playerSelection !== 'scissors') {
+				return 'invalid choice entered, try again';
+			}
+			return `player wins with ${playerSelection} vs ${computerSelection}`;
+			*/
+
+			/* else if (playerSelection < computerSelection) {
+				return `Player: ${playerSelection} VS ${computerSelection} \nResult: (comp)${computerSelection} WINS`; 
+
+			} else  if (playerSelection > computerSelection) {
+				return `Player: ${playerSelection} VS ${computerSelection} \nResult: (comp) ${computerSelection} LOSES`; 
+			}
+			*/
+			//returns other results
+		} 
 
 		const playerSelection = validInput(prompt('Enter ROCK, PAPER or SCISSORS')).toLowerCase(); //accepts rOcK, Rock, rOck etc.
 		const computerSelection = computerPlay();
-		console.log(playRound(playerSelection, computerSelection))
+		console.log(playRound(playerSelection, computerSelection));
+		
 	</script>
 </body>
 </html>
