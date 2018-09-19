@@ -24,44 +24,45 @@
 		}
 
 		function playRound(playerSelection, compSelection) {
-			let outcome = '';
+			let result = '';
+
 			
 			switch(computerSelection) {
 				case 'rock': 
 				if (playerSelection == 'paper') {
-					outcome = `${playerSelection} vs ${computerSelection} - You WIN`;
+					result = `${playerSelection} vs ${computerSelection} - You WIN`;
 				} else if (playerSelection == 'scissors') {
-					outcome = `${playerSelection} vs ${computerSelection} - You LOSE`;
+					result = `${playerSelection} vs ${computerSelection} - You LOSE`;
 				} else if (playerSelection == computerSelection) {
-					outcome = 'tis a draw!';
+					result = 'tis a draw!';
 				} else {
-					outcome = 'invalid input';
+					result = alert('invalid choice entered, try again');;
 				}
 				break;
 				case 'paper': 
 				if (playerSelection == 'scissors') {
-					outcome = `${playerSelection} vs ${computerSelection} - You WIN`;
+					result = `${playerSelection} vs ${computerSelection} - You WIN`;
 				} else if (playerSelection == 'rock') {
-					outcome = `${playerSelection} vs ${computerSelection} - You LOSE`;
+					result = `${playerSelection} vs ${computerSelection} - You LOSE`;
 				} else if (playerSelection == computerSelection) {
-					outcome = 'tis a draw!';
+					result = 'tis a draw!';
 				} else {
-					outcome = 'invalid input';
+					result = alert('invalid choice entered, try again');;
 				}
 				break;
 				case 'scissors': 
 				if (playerSelection == 'rock') {
-					outcome = `${playerSelection} vs ${computerSelection} - You WIN`;
+					result = `${playerSelection} vs ${computerSelection} - You WIN`;
 				} else if (playerSelection == 'paper') {
-					outcome = `${playerSelection} vs ${computerSelection} - You LOSE`;
+					result = `${playerSelection} vs ${computerSelection} - You LOSE`;
 				} else if (playerSelection == computerSelection) {
-					outcome = 'tis a draw!';
+					result = 'tis a draw!';
 				} else {
-					outcome = 'invalid input';
+					result = alert('invalid choice entered, try again');;
 				}
 				break;
 			}
-			return outcome;
+			return result;
 			/*
 			
 			if (playerSelection === computerSelection) {
