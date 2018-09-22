@@ -56,8 +56,8 @@
 		let gameResult = () => { //output msg based on result
 			let output = '';
 			(p_score === 0 && c_score === 0) ? output = alert('Stop leaving it empty!') :
-			(p_score == c_score) ? output = alert(`Its a tie! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}`) :
-			(p_score < c_score) ? output = alert(`Computer wins the game! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}`) : output = alert(`Player wins the game! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}`);
+			(p_score == c_score) ? output = `Its a tie! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}` :
+			(p_score < c_score) ? output = `Computer wins the game! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}` : output = `Player wins the game! \nCOMP SCORE: ${c_score} \nPLAYER SCORE: ${p_score}`;
 			scoreReset(); //score rest func call
 			return output;
 		}
