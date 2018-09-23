@@ -40,7 +40,7 @@
 
 		let game = () => {
 			lineSeperator(); //prints so its readable
-			for (var i = 0; i < 5; i++) {
+			for (let i = 0; i < 5; i++) {
 			let playerSelection = prompt('Enter ROCK, PAPER or SCISSORS').toLowerCase();
 			let computerSelection = computerPlay();
 			let gameRound = playRound(playerSelection, computerSelection);
