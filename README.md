@@ -1,6 +1,6 @@
-Web101 - The Odin Project
+#Web101 - The Odin Project
 
-JavaScript - Rock Paper Scissors Project
+##JavaScript - Rock Paper Scissors Project
 
 Took me a while but in the end I managed to get it done!
 
