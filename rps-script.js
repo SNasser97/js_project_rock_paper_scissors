@@ -1,7 +1,6 @@
 //Player and computer score
 		let p_score = 0;
 		let c_score = 0;
-		let btn_start = document.getElementById('start');
 
 		let computerPlay = () => { //computer selects random choice
 			let option	= Math.floor(Math.random() * 3);
