@@ -16,7 +16,6 @@
 				(playerSelection == 'scissors') ? result = `${playerSelection} vs ${computerSelection} - You LOSE` : 
 				(playerSelection == computerSelection) ? result = 'DRAW' : result = 'invalid choice'; //same selection then tie, other inputs by player are invalid
 				break;
-				break;
 				case 'paper': 
 				(playerSelection =='scissors') ? result = `${playerSelection} vs ${computerSelection} - You WIN` : 
 				(playerSelection == 'rock') ? result = `${playerSelection} vs ${computerSelection} - You LOSE` : 
